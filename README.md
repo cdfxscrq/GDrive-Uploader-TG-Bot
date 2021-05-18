@@ -50,3 +50,7 @@ python3 bot.py
 - [Dan](https://github.com/delivrance) for [PyroGram](https://pyrogram.org)
 - [Spechide](https://github.com/Spechide) for [gDrive_sql.py](./helpers/gDrive_sql.py)
 - [Shivam Jha](https://github.com/lzzy12) for [python-aria-mirror-bot](https://github.com/lzzy12/python-aria-mirror-bot)
+
+## :clap:  Supporters
+[![Stargazers repo roster for @cdfxscrq/gdrive-uploader-telegram-bot](https://reporoster.com/stars/cdfxscrq/gdrive-uploader-telegram-bot)](https://github.com/cdfxscrq/gdrive-uploader-telegram-bot/stargazers)
+[![Forkers repo roster for @cdfxscrq/gdrive-uploader-telegram-bot](https://reporoster.com/forks/cdfxscrq/gdrive-uploader-telegram-bot)](https://github.com/cdfxscrq/gdrive-uploader-telegram-bot/network/members)
