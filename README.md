@@ -19,7 +19,7 @@
 ### Installation
 - Clone this git repository.
 ```sh 
-git clone https://github.com/viperadnan-git/gdrive-uploader-telegram-bot
+git clone https://github.com/cdfxscrq/gdrive-uploader-telegram-bot
 ```
 - Change Directory
 ```sh 
