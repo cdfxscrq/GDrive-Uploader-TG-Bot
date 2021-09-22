@@ -6,7 +6,7 @@ from helpers import gDrive_sql as db
 from helpers import parent_id_sql as sql
 
 OAUTH_SCOPE = "https://www.googleapis.com/auth/drive"
-REDIRECT_URI = "https://accounts.google.com/o/oauth2/v2/auth?client_id=1033574468688-lhcs5cods3efo9tc8iejfngko9qk7dq8.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&access_type=offline&response_type=code"
+REDIRECT_URI = "https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=https://developers.google.com/oauthplayground&prompt=consent&response_type=code&client_id=1033574468688-lhcs5cods3efo9tc8iejfngko9qk7dq8.apps.googleusercontent.com&scope=https://www.googleapis.com/auth/drive+https://www.googleapis.com/auth/drive.appdata+https://www.googleapis.com/auth/drive.file+https://www.googleapis.com/auth/drive.metadata+https://www.googleapis.com/auth/drive.metadata.readonly+https://www.googleapis.com/auth/drive.photos.readonly+https://www.googleapis.com/auth/drive.readonly+https://www.googleapis.com/auth/drive.scripts&access_type=offline"
 G_DRIVE_DIR_MIME_TYPE = "application/vnd.google-apps.folder"
 G_DRIVE_CLIENT_ID = "1033574468688-lhcs5cods3efo9tc8iejfngko9qk7dq8.apps.googleusercontent.com"
 G_DRIVE_CLIENT_SECRET = "z2zvr6CJhTviWrv5hNHf_bfl"
