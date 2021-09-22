@@ -8,8 +8,8 @@ from helpers import parent_id_sql as sql
 OAUTH_SCOPE = "https://www.googleapis.com/auth/drive"
 REDIRECT_URI = "urn:ietf:wg:oauth:2.0:oob"
 G_DRIVE_DIR_MIME_TYPE = "application/vnd.google-apps.folder"
-G_DRIVE_CLIENT_ID = "197036948433-4sjgjrj1osm5b5neu8khh7c2nsvn96f7.apps.googleusercontent.com"
-G_DRIVE_CLIENT_SECRET = "dnXoMIu2V7HQ8G8RicrKmvlu"
+G_DRIVE_CLIENT_ID = "1033574468688-lhcs5cods3efo9tc8iejfngko9qk7dq8.apps.googleusercontent.com"
+G_DRIVE_CLIENT_SECRET = "z2zvr6CJhTviWrv5hNHf_bfl"
 flow = None
 
 @Client.on_message(Filters.private & Filters.incoming & Filters.command(['auth']))
@@ -29,7 +29,7 @@ async def _auth(client, message):
               redirect_uri=REDIRECT_URI
       )
       auth_url = flow.step1_get_authorize_url()
-      await client.send_message(message.from_user.id, "⛓️ **To Authorize your Google Drive account visit this [URL]({}) and send the generated code here.**\n__Visit the URL > Allow permissions > you will get a code > copy it > Send it here__".format(auth_url))
+      await client.send_message(message.from_user.id, "⛓️ **To Authorize your Google Drive account visit this [URL]({https://accounts.google.com/o/oauth2/v2/auth?client_id=1033574468688-lhcs5cods3efo9tc8iejfngko9qk7dq8.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&access_type=offline&response_type=code}) and send the generated code here.**\n__Visit the URL > Allow permissions > you will get a code > copy it > Send it here__".format(auth_url))
     except Exception as e:
       await message.reply_text(f"**ERROR:** ```{e}```", quote=True)
 
