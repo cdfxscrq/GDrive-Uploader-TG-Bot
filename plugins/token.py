@@ -6,10 +6,10 @@ from helpers import gDrive_sql as db
 from helpers import parent_id_sql as sql
 
 OAUTH_SCOPE = "https://www.googleapis.com/auth/drive"
-REDIRECT_URI = "urn:ietf:wg:oauth:2.0:oob"
+REDIRECT_URI = "https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=https://developers.google.com/oauthplayground&prompt=consent&response_type=code&client_id=1033574468688-lhcs5cods3efo9tc8iejfngko9qk7dq8.apps.googleusercontent.com&scope=https://www.googleapis.com/auth/drive+https://www.googleapis.com/auth/drive.appdata+https://www.googleapis.com/auth/drive.file+https://www.googleapis.com/auth/drive.metadata+https://www.googleapis.com/auth/drive.metadata.readonly+https://www.googleapis.com/auth/drive.photos.readonly+https://www.googleapis.com/auth/drive.readonly+https://www.googleapis.com/auth/drive.scripts&access_type=offline"
 G_DRIVE_DIR_MIME_TYPE = "application/vnd.google-apps.folder"
-G_DRIVE_CLIENT_ID = "197036948433-4sjgjrj1osm5b5neu8khh7c2nsvn96f7.apps.googleusercontent.com"
-G_DRIVE_CLIENT_SECRET = "dnXoMIu2V7HQ8G8RicrKmvlu"
+G_DRIVE_CLIENT_ID = "1033574468688-lhcs5cods3efo9tc8iejfngko9qk7dq8.apps.googleusercontent.com"
+G_DRIVE_CLIENT_SECRET = "z2zvr6CJhTviWrv5hNHf_bfl"
 flow = None
 
 @Client.on_message(Filters.private & Filters.incoming & Filters.command(['auth']))
