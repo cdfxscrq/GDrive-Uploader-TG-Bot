@@ -17,7 +17,7 @@ ParentID.__table__.create(checkfirst=True)
 
 def get_id(chat_id):
     try:
-        return SESSION.query(ParentID).filter(ParentID.chat_id == chat_id).one()
+        return SESSION.query(ID).filter(ParentID.chat_id == chat_id).one()
     except:
         return None
     finally:
