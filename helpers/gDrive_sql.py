@@ -41,7 +41,7 @@ def get_credential(chat_id):
 
 def clear_credential(chat_id):
     with INSERTION_LOCK:
-        saved_cred = SESSION.query(gDriveCreds).get(chat_id)
+        saved_cred = SESSION.query(senkugDriveCreds).get(chat_id)
         if saved_cred:
             SESSION.delete(saved_cred)
             SESSION.commit()
