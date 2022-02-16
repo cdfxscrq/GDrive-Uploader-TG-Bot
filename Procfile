@@ -1,1 +1,1 @@
-worker: python bot.py
+worker: SENKU-GDRIVE-UPLOADER-BOT 
