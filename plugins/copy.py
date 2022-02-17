@@ -137,4 +137,4 @@ async def _copy(client, message):
       except Exception as e:
          await sent_message.edit(f'**ERROR:** ```{e}```')
   else:
-    await message.reply_text('**Copy Google Drive Files or Folder**\n__Copy GDrive Files/Folder to your Google Drive Account. Use__ ```/copy {GDriveFolderURL/FileURL}``` __for copying.__')
+    wait message.reply_text('**Copy Google Drive Files or Folder**\n__Copy GDrive Files/Folder to your Google Drive Account. Use__ ```/copy {GDriveFolderURL/FileURL}``` __for copying.__')

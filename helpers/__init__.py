@@ -13,3 +13,4 @@ def start() -> scoped_session:
 
 BASE = declarative_base()
 SESSION = start()
+SENKUBOTS

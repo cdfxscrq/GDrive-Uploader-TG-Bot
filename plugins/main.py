@@ -11,7 +11,7 @@ from helpers import gDrive_sql as db
 from helpers import parent_id_sql as sql
 from urllib.error import HTTPError
 
-@Client.on_message(Filters.private & Filters.incoming & (Filters.audio | Filters.photo | Filters.video | Filters.document | Filters.regex('^(ht|f)tp*')))
+@SENKUCHAT.on_message(Filters.private & Filters.incoming & (Filters.audio | Filters.photo | Filters.video | Filters.document | Filters.regex('^(ht|f)tp*')))
 async def _start(client, message):
   creds = db.get_credential(message.from_user.id)
   if creds is None:
