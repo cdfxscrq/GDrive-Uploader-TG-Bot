@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String, Numeric
 from helpers import SESSION, BASE
-
+from sqlalchemy.exc import NoResultFound
 
 class ParentID(BASE):
     __tablename__ = "ParentID"
@@ -11,34 +11,52 @@ class ParentID(BASE):
         self.chat_id = chat_id
         self.parent_id = parent_id
 
-
+# Table creation; in production, you might want to use migrations instead
 ParentID.__table__.create(checkfirst=True)
 
-
 def get_id(chat_id):
+    """
+    Fetch the ParentID record for the given chat_id.
+    Returns the ParentID instance or None if not found.
+    """
     try:
         return SESSION.query(ParentID).filter(ParentID.chat_id == chat_id).one()
-    except:
+    except NoResultFound:
+        return None
+    except Exception:
         return None
     finally:
         SESSION.close()
 
-
 def set_id(chat_id, parent_id):
-    adder = SESSION.query(ParentID).get(chat_id)
-    if adder:
-        adder.parent_id = parent_id
-    else:
-        adder = ParentID(
-            chat_id,
-            parent_id
-        )
-    SESSION.add(adder)
-    SESSION.commit()
-
+    """
+    Set or update the parent_id for a given chat_id.
+    """
+    try:
+        instance = SESSION.get(ParentID, chat_id)
+        if instance:
+            instance.parent_id = parent_id
+        else:
+            instance = ParentID(chat_id, parent_id)
+            SESSION.add(instance)
+        SESSION.commit()
+    except Exception:
+        SESSION.rollback()
+        raise
+    finally:
+        SESSION.close()
 
 def del_id(chat_id):
-    rem = SESSION.query(ParentID).get(chat_id)
-    if rem:
-        SESSION.delete(rem)
-        SESSION.commit()
+    """
+    Delete the ParentID record for the given chat_id.
+    """
+    try:
+        instance = SESSION.get(ParentID, chat_id)
+        if instance:
+            SESSION.delete(instance)
+            SESSION.commit()
+    except Exception:
+        SESSION.rollback()
+        raise
+    finally:
+        SESSION.close()
