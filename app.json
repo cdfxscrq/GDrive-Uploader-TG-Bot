@@ -1,21 +1,30 @@
 {
-  "name": "GDrive-Uploader-Bot",
-  "description": "Telegram/Direct Links to GDrive Uploader Bot",
-  "repository": "https://github.com/viperadnan-git/gdrive-uploader-telegram-bot",
+  "name": "GDrive-Uploader-TG-Bot",
+  "description": "Telegram/Direct Links to Google Drive Uploader Bot",
+  "repository": "https://github.com/cdfxscrq/GDrive-Uploader-TG-Bot",
   "logo": "https://telegra.ph/file/8669281aa2360613f7511.jpg",
-  "keywords": ["Telegram", "Google Drive", "uploader"],
+  "keywords": [
+    "Telegram",
+    "Google Drive",
+    "uploader",
+    "bot",
+    "python"
+  ],
   "env": {
-      "BOT_TOKEN": {
-      "description": "Get it from @BotFather"
+    "BOT_TOKEN": {
+      "description": "Get it from @BotFather",
+      "required": true
     },
     "APP_ID": {
-      "description": "Your API_ID, Get it from https://my.telegram.org/apps"
+      "description": "Your API_ID from https://my.telegram.org/apps",
+      "required": true
     },
     "API_HASH": {
-      "description": "Your API_HASH, Get it from https://my.telegram.org/apps"
+      "description": "Your API_HASH from https://my.telegram.org/apps",
+      "required": true
     }
-   },
-   "buildpacks": [
+  },
+  "buildpacks": [
     {
       "url": "heroku/python"
     }
